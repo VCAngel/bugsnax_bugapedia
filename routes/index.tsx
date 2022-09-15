@@ -1,8 +1,20 @@
 import Counter from "../islands/Counter.tsx";
+import { Container } from "../components/Container.tsx";
 
 export default function Home() {
+  const meta = {
+    title: "Snackpedia",
+    description: "Learn about any bugsnax!",
+    meta: {
+      charset: "utf-8",
+      name: {
+        keywords: "preact,meta,document,html,tags",
+      }
+    }
+  }
+
   return (
-    <div>
+    <Container {...meta}>
       <img
         src="/logo.svg"
         width="128"
@@ -14,6 +26,6 @@ export default function Home() {
         file, and refresh.
       </p>
       <Counter start={3} />
-    </div>
+    </Container>
   );
 }
